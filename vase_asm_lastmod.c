@@ -10,12 +10,11 @@
 
 #define DEBUG_INFO 1
 
-#ifndef debug_fun
 #define debug_fun() if (DEBUG_INFO) { \
+    char debug_buf[256]; \
     sprintf(debug_buf, "[File] %s : [Func] %s: Calling.\n", __FILE__, __func__); \
     klee_id(debug_buf); \
 }
-#endif
 
 #ifdef KLEE
 void klee_id(const char *message) {
