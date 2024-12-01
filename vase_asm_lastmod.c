@@ -1,4 +1,5 @@
 //Modified stub for atoi
+//Added definition for debug_fun
 //Modified Code to Replace Symbolic Variables with Fixed Values:void __VERIFIER_nondet_u32
 
 //vase modified+ new definition for string_equals
