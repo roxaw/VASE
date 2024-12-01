@@ -1,5 +1,15 @@
+//Modified stub for atoi
+//Added debug_fun() definition
+
 #include <stdio.h>
 #include <stdlib.h>
+#define DEBUG_INFO 1
+
+#define debug_fun() if (DEBUG_INFO) { \
+    char debug_buf[256]; \
+    sprintf(debug_buf, "[File] %s : [Func] %s: Calling.\n", __FILE__, __func__); \
+    klee_id(debug_buf); \
+}
 
 // Stub for atoi
 int atoi(const char *str) {
